@@ -1,0 +1,121 @@
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo {
+    width: 23%;
+    padding: 1%;
+}
+
+nav {
+    width: 73%;
+    padding: 1%;
+}
+
+nav ul {
+    width: 50%;
+    margin-left: auto;
+}
+
+.logo img {
+    text-align: center;
+}
+
+.heroImg {
+    height: 800px;
+    padding: 25px;
+}
+
+.content {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+.flexContainer>div {
+    width: 33%;
+    margin: 10px;
+    padding: 20px;
+}
+
+
+.workGrid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "image1 content1"
+        "image2 content2"
+        "image3 content3";
+}
+
+.workGrid>div:nth-child(1) {
+    grid-area: image1;
+}
+
+.workGrid>div:nth-child(2) {
+    grid-area: content1;
+}
+
+.workGrid>div:nth-child(3) {
+    grid-area: image2;
+}
+
+.workGrid>div:nth-child(4) {
+    grid-area: content2;
+}
+
+.workGrid>div:nth-child(5) {
+    grid-area: image3;
+}
+
+.workGrid>div:nth-child(6) {
+    grid-area: content3;
+}
+
+
+
+footer {
+    background-color: #373738;
+    padding: 10px;
+}
+
+footer ul {
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer li {
+    padding: 0 10px;
+}
+
+@media (max-width: 600px) {
+    /* Mobile styles */
+  
+    /* My UX Skills section */
+    .flexContainer {
+      flex-direction: column;
+    }
+  
+    .flexContainer > div {
+      width: 100%;
+    }
+  
+    /* My Work section */
+    .workGrid {
+      grid-template-areas:
+        "image1"
+        "content1"
+        "image2"
+        "content2"
+        "image3"
+        "content3";
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+    }
+  }
+  
