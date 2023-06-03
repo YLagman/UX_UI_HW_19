@@ -18,6 +18,29 @@ nav ul {
     margin-left: auto;
 }
 
+nav ul li {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1);
+}
+
+
 .logo img {
     text-align: center;
 }
@@ -40,6 +63,52 @@ nav ul {
     width: 33%;
     margin: 10px;
     padding: 20px;
+}
+
+#myWorkButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #DB4D4D;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#myWorkButton:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+.btn {
+    border: 2px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #DB4D4D;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #373738;
+    color: #fff;
+}
+
+#viewProject {
+    border: 2px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #DB4D4D;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#viewProject:hover {
+    background-color: #DB4D4D;
+    color: #fff;
 }
 
 
@@ -95,27 +164,26 @@ footer li {
 
 @media (max-width: 600px) {
     /* Mobile styles */
-  
+
     /* My UX Skills section */
     .flexContainer {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
-    .flexContainer > div {
-      width: 100%;
+
+    .flexContainer>div {
+        width: 100%;
     }
-  
+
     /* My Work section */
     .workGrid {
-      grid-template-areas:
-        "image1"
-        "content1"
-        "image2"
-        "content2"
-        "image3"
-        "content3";
-      grid-template-rows: auto;
-      grid-template-columns: 1fr;
+        grid-template-areas:
+            "image1"
+            "content1"
+            "image2"
+            "content2"
+            "image3"
+            "content3";
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
     }
-  }
-  
+}
